@@ -1,7 +1,7 @@
 # Data sorting and filtering
 
 ## Usage
-Usage: `java -jar [datamerge-0.0.1-SNAPSHOT.jar] ["full path of the destination CSV file]`.
+Usage: `java -jar [datamerge-0.0.1-SNAPSHOT.jar] ["full path of the destination CSV file"]`.
 
 This project will generate a CSV output file with the full file path you specified, also it will print record numbers associated with each service-guid in console.
 
