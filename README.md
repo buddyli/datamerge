@@ -17,7 +17,7 @@ The main entrance class is `com.mariner.datamerge.Datamerge`. It's responsibilit
 1. Java 8+
 2. *If you want to build package by yourself, please make sure you have Maven installed and configured in your local.*
 
-## Here are libraries used in this project to parse CSV, JSON and XML:
+## Libraries used in this project to parse CSV, JSON and XML:
 1. Google gson: By leveraging this library to parse JSON files. Can easily read from JSON and convert to Objects directly, with supporting of java annotation.
 2. Simple-XML: By leveraging this library to parse XML files. It's a high performance XML serialization and configuration frame for Java, with full object serialization and deserialization, and great annotations support. 
 3. Apache commons-csv: By leveraging this library to parse and write CSV files. This framework provides a common and simple interface for reading and writing CSV files.
