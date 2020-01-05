@@ -1,5 +1,6 @@
 package com.mariner.datamerge.loader;
 
+import java.io.Reader;
 import java.util.List;
 
 import com.mariner.datamerge.bean.RequestObj;
@@ -11,5 +12,5 @@ import com.mariner.datamerge.bean.RequestObj;
  *
  */
 public interface RecordsLoader {
-	public List<RequestObj> loadRecords(String file);
+	public List<RequestObj> loadRecords(Reader file);
 }

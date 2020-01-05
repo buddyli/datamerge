@@ -1,7 +1,6 @@
 package com.mariner.datamerge.loader;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.text.ParseException;
@@ -23,13 +22,12 @@ import com.mariner.datamerge.bean.RequestObj;
 public class CSVRecordsLoader implements RecordsLoader {
 
 	@Override
-	public List<RequestObj> loadRecords(String file) {
+	public List<RequestObj> loadRecords(Reader file) {
 		List<RequestObj> list = null;
 
 		try {
 			list = new LinkedList<RequestObj>();
-			Reader in = new FileReader(file);
-			Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(in);
+			Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(file);
 
 			for (CSVRecord record : records) {
 				RequestObj rObj = new RequestObj();

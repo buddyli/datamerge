@@ -1,7 +1,6 @@
 package com.mariner.datamerge.loader;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.Reader;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -19,15 +18,15 @@ import com.mariner.datamerge.bean.RequestObj;
 public class JsonRecordsLoader implements RecordsLoader {
 
 	@Override
-	public List<RequestObj> loadRecords(String file) {
+	public List<RequestObj> loadRecords(Reader file) {
 
 		try {
 			Gson gson = new Gson();
-			List<RequestObj> list = gson.fromJson(new FileReader(file), new TypeToken<List<RequestObj>>() {
+			List<RequestObj> list = gson.fromJson(file, new TypeToken<List<RequestObj>>() {
 			}.getType());
 
 			return list;
-		} catch (JsonIOException | JsonSyntaxException | FileNotFoundException e) {
+		} catch (JsonIOException | JsonSyntaxException e) {
 			e.printStackTrace();
 		}
 

@@ -1,6 +1,6 @@
 package com.mariner.datamerge.loader;
 
-import java.io.File;
+import java.io.Reader;
 import java.util.List;
 
 import org.simpleframework.xml.Serializer;
@@ -18,11 +18,11 @@ import com.mariner.datamerge.bean.XMLRecords;
 public class XMLRecordsLoader implements RecordsLoader {
 
 	@Override
-	public List<RequestObj> loadRecords(String file) {
+	public List<RequestObj> loadRecords(Reader file) {
 		Serializer serializer = new Persister();
 
 		try {
-			XMLRecords records = serializer.read(XMLRecords.class, new File(file));
+			XMLRecords records = serializer.read(XMLRecords.class, file);
 			return records.getRecords();
 		} catch (Exception e) {
 			e.printStackTrace();
