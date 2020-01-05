@@ -51,7 +51,7 @@ public class Datamerge {
 		list = list.stream().filter(x -> x.getPacketsServiced() != 0)
 				.sorted((r1, r2) -> r1.getReqTime().compareTo(r2.getReqTime())).collect(Collectors.toList());
 
-		// Persist sorted result to target CSV with the same format as "reports.csv"
+		// Write sorted result to target CSV with the same format as "reports.csv"
 		try (CSVPrinter printer = new CSVPrinter(new FileWriter(destCsv), CSVFormat.EXCEL)) {
 			printer.printRecord("client-address", "client-guid", "request-time", "service-guid", "retries-request",
 					"packets-requested", "packets-serviced", "max-hole-size");

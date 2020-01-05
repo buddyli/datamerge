@@ -1,9 +1,9 @@
 # Data sorting and filtering
 
 ## Usage
-Usage: `java -jar [datamerge-0.0.1-SNAPSHOT.jar] ["full path of the destination CSV file"]`.
+Usage: `java -jar [datamerge-0.0.1-SNAPSHOT.jar] ["full path of the destination CSV file"]`. For example `java -jar datamerge-0.0.1-SNAPSHOT.jar /tmp/target.csv`.
 
-This project will generate a CSV output file with the full file path you specified, also it will print record numbers associated with each service-guid in console.
+This project will generate a CSV output file to the full file path you specified, also it will print record numbers associated with each service-guid in console.
 
 * Can download the runnable jar from [here](https://github.com/buddyli/datamerge/blob/master/target/datamerge-0.0.1-SNAPSHOT.jar) without building by yourself.
 * Please change the ** jar name ** if you built the package with a different name.
